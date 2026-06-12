@@ -1,6 +1,4 @@
 ---
-import Logo from "./Logo.astro";
-
 const cols = [
   { title: "Company", links: ["About", "Process", "Careers", "Contact"] },
   { title: "Services", links: ["Workforce Staffing", "Housekeeping", "Screening", "Compliance"] },
@@ -9,33 +7,35 @@ const cols = [
 const year = new Date().getFullYear();
 ---
 
-<footer class="relative border-t border-[var(--color-line)] py-14">
-  <div class="mx-auto max-w-7xl px-5 sm:px-8">
-    <div class="grid gap-10 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
-      <div>
-        <Logo />
-        <p class="mt-4 max-w-xs text-sm leading-relaxed text-muted">
-          The bridge between hard-working people and the warehouses that need them.
-          Professional, human, and built on trust.
-        </p>
-      </div>
-      {cols.map((c) => (
+<footer class="relative bg-black pt-16 pb-10">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 md:px-16 lg:px-20">
+    <div class="liquid-glass rounded-[1.75rem] p-8 sm:p-12">
+      <div class="grid gap-10 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div>
-          <h4 class="text-xs font-semibold uppercase tracking-[0.2em] text-faint">{c.title}</h4>
-          <ul class="mt-4 space-y-2.5">
-            {c.links.map((l) => (
-              <li><a href="#" class="text-sm text-muted transition-colors hover:text-ink">{l}</a></li>
-            ))}
-          </ul>
+          <img src="/logo/goldenpath-light.png" alt="GoldenPath Solutions" width="916" height="193" class="h-8 w-auto" />
+          <p class="mt-5 max-w-xs text-sm leading-relaxed text-white/70 font-body font-light">
+            The bridge between hard-working people and the warehouses that need
+            them. Professional, human, and built on trust.
+          </p>
         </div>
-      ))}
-    </div>
+        {cols.map((c) => (
+          <div>
+            <h4 class="text-xs font-semibold uppercase tracking-[0.2em] text-white/50 font-body">{c.title}</h4>
+            <ul class="mt-4 space-y-2.5">
+              {c.links.map((l) => (
+                <li><a href="#" class="text-sm text-white/75 hover:text-white transition-colors font-body">{l}</a></li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
 
-    <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-[var(--color-line)] pt-6 sm:flex-row">
-      <p class="text-xs text-faint">© {year} GoldenPath Solutions. All rights reserved.</p>
-      <div class="flex items-center gap-5 text-xs text-faint">
-        <a href="#" class="transition-colors hover:text-ink">Privacy</a>
-        <a href="#" class="transition-colors hover:text-ink">Terms</a>
+      <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 sm:flex-row">
+        <p class="text-xs text-white/50 font-body">© {year} GoldenPath Solutions. All rights reserved.</p>
+        <div class="flex items-center gap-5 text-xs text-white/50 font-body">
+          <a href="#" class="hover:text-white transition-colors">Privacy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms</a>
+        </div>
       </div>
     </div>
   </div>

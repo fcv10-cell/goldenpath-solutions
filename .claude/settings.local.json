@@ -18,7 +18,10 @@
       "Bash(which ffmpeg *)",
       "Bash(node -e \"try{const s=require\\('sharp'\\);console.log\\('sharp OK', s.versions.vips||''\\);}catch\\(e\\){console.log\\('no sharp:', e.message.split\\('\\\\n'\\)[0]\\)}\")",
       "Bash(node -e ' *)",
-      "Bash(mkdir -p public/img public/logo .tmp_thumbs)"
+      "Bash(mkdir -p public/img public/logo .tmp_thumbs)",
+      "Bash(break)",
+      "Bash('/c/Program Files/GitHub CLI/gh.exe' auth status)",
+      "Bash(cd \"/c/Users/f_cv1/Documents/Paguinas Wed/CLAUDE - Golden Pack\" && rm -rf .tmp_thumbs && echo \"cleaned\")"
     ]
   }
 }

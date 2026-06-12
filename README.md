@@ -1,9 +1,10 @@
 # GoldenPath Solutions — Website
 
-Modern, professional marketing site for **GoldenPath Solutions**, a warehouse
+Cinematic, professional marketing site for **GoldenPath Solutions**, a warehouse
 staffing & recruitment company. Built with **Astro + Tailwind CSS v4**, featuring
-a dark premium aesthetic and progressive scroll animations, based on the official
-GoldenPath brand guidelines.
+a **liquid-glass** design system, full-bleed looping background videos, and
+blur-in entrance animations — a dark, premium, space-travel-inspired aesthetic
+grounded in the official GoldenPath brand (gold accents, warehouse footage).
 
 ## Brand
 
@@ -15,29 +16,29 @@ GoldenPath brand guidelines.
 | Golden Path Amber | `#a87900` | Accent gradient |
 | Pure White | `#ffffff` | Contrast |
 
-Headings use **Plus Jakarta Sans**, body uses **Inter** (web-safe stand-ins for the
-brand's TT Commons Pro). Tone: professional, human, aspirational.
+Headings use **Instrument Serif** (always italic), body uses **Barlow**. Tone:
+professional, human, aspirational. The base is black with white liquid-glass
+chrome and Champagne Gold (`#c8a96b`) accents.
 
 ## Tech stack
 
 - [Astro](https://astro.build) 6 (static output)
 - [Tailwind CSS](https://tailwindcss.com) v4 (via `@tailwindcss/vite`)
-- Vanilla JS for scroll reveal, scroll-progress bar, and animated stat counters
-  (no heavy animation libraries)
+- Vanilla JS for the cinematic effects (no heavy animation libraries): word-by-word
+  blur-in headlines, blur-in scroll reveals, a custom `FadingVideo` loop crossfade
+  (rAF-driven), scroll-progress bar, and animated stat counters
 
 ## Project structure
 
 ```
 src/
-  layouts/Layout.astro      # HTML shell, fonts, global scroll scripts
+  layouts/Layout.astro      # HTML shell, fonts, all client scripts
   components/
-    Nav.astro               # Sticky nav + mobile menu
-    Hero.astro              # Headline, CTAs, visual placeholder
-    Marquee.astro           # "Trusted by" logo marquee
-    Services.astro          # 3 service cards
-    Stats.astro             # Animated stat counters
-    Process.astro           # 4-step "how it works"
-    Roles.astro             # Contract types + For Employers / For Workers
+    Nav.astro               # Liquid-glass pill nav + mobile menu (in Hero)
+    Hero.astro              # Full-bleed video hero, glass badge/CTAs/stat cards
+    Services.astro          # Full-bleed video "Capabilities" + 3 glass cards
+    Stats.astro             # Glass stat strip with animated counters
+    Process.astro           # 4-step glass cards
     Contact.astro           # CTA + contact form
     Footer.astro
   pages/index.astro         # Page assembly

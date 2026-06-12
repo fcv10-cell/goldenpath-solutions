@@ -1,61 +1,53 @@
 ---
-import Logo from "./Logo.astro";
-
 const links = [
+  { label: "Home", href: "#top" },
   { label: "Services", href: "#services" },
   { label: "Process", href: "#process" },
   { label: "Roles", href: "#roles" },
-  { label: "About", href: "#about" },
+  { label: "Contact", href: "#contact" },
 ];
 ---
 
-<header id="site-nav" class="fixed inset-x-0 top-0 z-50 border-b border-transparent">
-  <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-3.5 sm:px-8">
-    <Logo />
+<header class="fixed top-4 inset-x-0 z-50 px-5 sm:px-8 lg:px-16">
+  <nav class="flex items-center justify-between">
+    <!-- Left: logo -->
+    <a href="#top" aria-label="GoldenPath Solutions — home" class="flex items-center">
+      <img src="/logo/goldenpath-light.png" alt="GoldenPath Solutions" width="916" height="193" class="h-7 w-auto sm:h-8" />
+    </a>
 
-    <div class="hidden items-center gap-1 md:flex">
-      {
-        links.map((l) => (
-          <a
-            href={l.href}
-            class="rounded-full px-4 py-2 text-sm font-medium text-muted transition-colors hover:text-ink"
-          >
-            {l.label}
-          </a>
-        ))
-      }
-    </div>
-
-    <div class="hidden items-center gap-2.5 md:flex">
-      <a href="#contact" class="text-sm font-medium text-muted transition-colors hover:text-ink px-3 py-2">
-        For Workers
-      </a>
-      <a
-        href="#contact"
-        class="group inline-flex items-center gap-1.5 rounded-full bg-gradient-to-b from-gold-bright to-gold px-5 py-2.5 text-sm font-semibold text-navy shadow-[0_8px_24px_-8px_rgba(200,169,107,0.6)] transition-transform hover:-translate-y-0.5"
-      >
+    <!-- Center: glass pill (desktop) -->
+    <div class="hidden lg:flex liquid-glass-strong rounded-full p-1.5 items-center gap-0.5">
+      {links.map((l) => (
+        <a href={l.href} class="px-3 py-2 text-sm font-medium text-white/90 font-body rounded-full hover:text-white transition-colors">
+          {l.label}
+        </a>
+      ))}
+      <a href="#contact" class="ml-1 inline-flex items-center gap-1.5 whitespace-nowrap rounded-full bg-white px-4 py-2 text-sm font-medium text-black hover:bg-white/90 transition-colors">
         Hire Talent
-        <svg class="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" viewBox="0 0 16 16" fill="none">
-          <path d="M3 8h9m0 0L8.5 4.5M12 8l-3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
       </a>
     </div>
 
-    <!-- Mobile burger -->
-    <button id="burger" class="grid h-10 w-10 place-items-center rounded-lg text-ink md:hidden" aria-label="Open menu">
-      <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8">
-        <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round" />
-      </svg>
+    <!-- Right: For Workers (desktop) / burger (mobile) -->
+    <a href="#contact" class="hidden lg:inline-block text-sm font-medium text-white/80 hover:text-white transition-colors font-body">
+      For Workers
+    </a>
+
+    <button id="burger" class="lg:hidden liquid-glass grid h-11 w-11 place-items-center rounded-full text-white" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/></svg>
     </button>
   </nav>
 
   <!-- Mobile menu -->
-  <div id="mobile-menu" class="hidden border-t border-[var(--color-line)] bg-navy/95 backdrop-blur-xl md:hidden">
-    <div class="flex flex-col gap-1 px-5 py-4">
+  <div id="mobile-menu" class="hidden lg:hidden mt-3 liquid-glass-strong rounded-[1.5rem] p-3">
+    <div class="flex flex-col">
       {links.map((l) => (
-        <a href={l.href} class="rounded-lg px-3 py-3 text-base font-medium text-muted hover:bg-navy-600 hover:text-ink">{l.label}</a>
+        <a href={l.href} class="px-4 py-3 text-base font-medium text-white/90 rounded-full hover:bg-white/5">{l.label}</a>
       ))}
-      <a href="#contact" class="mt-2 rounded-full bg-gradient-to-b from-gold-bright to-gold px-5 py-3 text-center text-sm font-semibold text-navy">Hire Talent</a>
+      <a href="#contact" class="mt-1 inline-flex items-center justify-center gap-1.5 rounded-full bg-white px-5 py-3 text-sm font-medium text-black">
+        Hire Talent
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+      </a>
     </div>
   </div>
 </header>
