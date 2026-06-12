@@ -1,0 +1,37 @@
+---
+// Full-width photographic band — a visual pause between sections.
+---
+
+<section class="relative overflow-hidden">
+  <div class="relative h-[60vh] min-h-[420px] w-full">
+    <video
+      class="absolute inset-0 h-full w-full object-cover"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      poster="/img/band-poster.webp"
+      aria-hidden="true"
+    >
+      <source src="/img/band.mp4" type="video/mp4" />
+    </video>
+    <div class="absolute inset-0 bg-gradient-to-r from-navy via-navy/75 to-navy/30"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-navy/60"></div>
+
+    <div class="relative z-10 mx-auto flex h-full max-w-7xl items-center px-5 sm:px-8">
+      <div class="max-w-xl">
+        <p data-reveal class="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-gold">Why GoldenPath</p>
+        <h2 data-reveal style="--reveal-delay:80ms" class="font-display text-3xl font-bold leading-[1.1] tracking-tight text-ink sm:text-4xl lg:text-[2.9rem]">
+          Our essence isn't the warehouse —<br class="hidden sm:block" />
+          it's the <span class="text-gold-gradient">people</span> who make it run.
+        </h2>
+        <p data-reveal style="--reveal-delay:160ms" class="mt-5 max-w-md text-[15px] leading-relaxed text-muted">
+          We build human relationships rooted in trust and respect, opening real
+          opportunities for hard-working people and reliable teams for the businesses
+          that depend on them.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

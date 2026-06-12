@@ -48,10 +48,14 @@ const workers = [
 
     <!-- Two audiences -->
     <div class="mt-20 grid gap-5 lg:grid-cols-2">
-      <div data-reveal class="relative overflow-hidden rounded-2xl glass p-8">
-        <div class="glow right-[-3rem] top-[-3rem] h-40 w-40 bg-royal/25"></div>
-        <h3 class="font-display text-2xl font-bold text-ink">For Employers</h3>
-        <p class="mt-2 text-[15px] text-muted">Build a reliable crew without the hiring headache.</p>
+      <div data-reveal class="group relative overflow-hidden rounded-2xl glass">
+        <div class="relative h-48 overflow-hidden">
+          <img src="/img/employers.webp" alt="Warehouse managers reviewing staffing" width="1100" height="900" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/40 to-transparent"></div>
+          <h3 class="absolute bottom-4 left-8 font-display text-2xl font-bold text-ink">For Employers</h3>
+        </div>
+        <div class="p-8">
+        <p class="text-[15px] text-muted">Build a reliable crew without the hiring headache.</p>
         <ul class="mt-6 space-y-3">
           {employers.map((e) => (
             <li class="flex items-center gap-3 text-[15px] text-ink">
@@ -63,12 +67,17 @@ const workers = [
         <a href="#contact" class="mt-7 inline-flex items-center gap-1.5 rounded-full bg-gradient-to-b from-gold-bright to-gold px-5 py-2.5 text-sm font-semibold text-navy transition-transform hover:-translate-y-0.5">
           Request talent
         </a>
+        </div>
       </div>
 
-      <div data-reveal style="--reveal-delay:120ms" class="relative overflow-hidden rounded-2xl glass p-8">
-        <div class="glow left-[-3rem] top-[-3rem] h-40 w-40 bg-gold/12"></div>
-        <h3 class="font-display text-2xl font-bold text-ink">For Workers</h3>
-        <p class="mt-2 text-[15px] text-muted">Find work that respects your effort and grows with you.</p>
+      <div data-reveal style="--reveal-delay:120ms" class="group relative overflow-hidden rounded-2xl glass">
+        <div class="relative h-48 overflow-hidden">
+          <img src="/img/workers.webp" alt="Warehouse team members walking together" width="1100" height="900" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/40 to-transparent"></div>
+          <h3 class="absolute bottom-4 left-8 font-display text-2xl font-bold text-ink">For Workers</h3>
+        </div>
+        <div class="p-8">
+        <p class="text-[15px] text-muted">Find work that respects your effort and grows with you.</p>
         <ul class="mt-6 space-y-3">
           {workers.map((w) => (
             <li class="flex items-center gap-3 text-[15px] text-ink">

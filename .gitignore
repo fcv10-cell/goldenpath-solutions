@@ -1,3 +1,9 @@
+# source design assets (large originals — optimized versions live in public/)
+/img/
+/video/
+/logo/
+.tmp_thumbs/
+
 # build output
 dist/
 # generated types

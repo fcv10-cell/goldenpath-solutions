@@ -12,7 +12,13 @@
       "Bash(xargs -0 sed -i -e s/font-800/font-extrabold/g -e s/font-700/font-bold/g -e s/font-600/font-semibold/g -e s/font-500/font-medium/g)",
       "Bash(npm run *)",
       "mcp__Claude_Preview__preview_start",
-      "PowerShell(winget install --id GitHub.cli --silent --accept-source-agreements --accept-package-agreements 2>&1)"
+      "PowerShell(winget install --id GitHub.cli --silent --accept-source-agreements --accept-package-agreements 2>&1)",
+      "PowerShell($gh = Get-Command gh -ErrorAction SilentlyContinue; if \\($gh\\) { \"FOUND: $\\($gh.Source\\)\" } else { $p = \"$env:ProgramFiles\\\\GitHub CLI\\\\gh.exe\"; if \\(Test-Path $p\\) { \"INSTALLED at $p \\(needs PATH refresh\\)\" } else { \"NOT FOUND YET\" } })",
+      "Bash(tasklist)",
+      "Bash(which ffmpeg *)",
+      "Bash(node -e \"try{const s=require\\('sharp'\\);console.log\\('sharp OK', s.versions.vips||''\\);}catch\\(e\\){console.log\\('no sharp:', e.message.split\\('\\\\n'\\)[0]\\)}\")",
+      "Bash(node -e ' *)",
+      "Bash(mkdir -p public/img public/logo .tmp_thumbs)"
     ]
   }
 }

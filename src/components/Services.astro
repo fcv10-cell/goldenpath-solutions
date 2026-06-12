@@ -2,16 +2,19 @@
 const services = [
   {
     title: "Workforce Staffing",
+    img: "/img/svc-staffing.webp",
     desc: "We find suitable candidates with the right skills and qualifications, matching the right person with the right job — handling the initial screening, interviewing, and background checks so both sides find a real fit.",
     icon: `<path d="M16 17v-1a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v1M9 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm13 9v-1a4 4 0 0 0-3-3.87M16 2.13A4 4 0 0 1 16 9.87" stroke-linecap="round" stroke-linejoin="round"/>`,
   },
   {
     title: "Housekeeping & Facility",
+    img: "/img/svc-facility.webp",
     desc: "Dependable cleaning and facility crews that keep your warehouse safe, compliant, and running. Trained, supervised, and ready for single shifts or long-term contracts.",
     icon: `<path d="m16 3 5 5-9 9-5 1 1-5 8-10Zm-1 1 5 5M3 21h8" stroke-linecap="round" stroke-linejoin="round"/>`,
   },
   {
     title: "Screening & Compliance",
+    img: "/img/svc-screening.webp",
     desc: "Background checks, identity and eligibility verification, and safety onboarding built into every placement — so your team can move fast without taking on risk.",
     icon: `<path d="M12 2 4 5v6c0 5 3.4 8.5 8 11 4.6-2.5 8-6 8-11V5l-8-3Zm-3 9.5 2.2 2.2L15.5 9" stroke-linecap="round" stroke-linejoin="round"/>`,
   },
@@ -35,14 +38,18 @@ const services = [
         <article
           data-reveal
           style={`--reveal-delay:${i * 110}ms`}
-          class="group relative overflow-hidden rounded-2xl glass p-7 transition-all duration-500 hover:-translate-y-1 hover:border-gold/35"
+          class="group relative overflow-hidden rounded-2xl glass transition-all duration-500 hover:-translate-y-1 hover:border-gold/35"
         >
-          <div class="glow right-[-3rem] top-[-3rem] h-32 w-32 bg-gold/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
-          <div class="relative">
-            <span class="grid h-12 w-12 place-items-center rounded-xl bg-navy-600 ring-1 ring-[var(--color-line)]">
-              <svg viewBox="0 0 24 24" class="h-6 w-6 text-gold" fill="none" stroke="currentColor" stroke-width="1.6" set:html={s.icon} />
+          <!-- Image header -->
+          <div class="relative h-44 overflow-hidden">
+            <img src={s.img} alt={s.title} width="900" height="700" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/30 to-transparent"></div>
+            <span class="absolute bottom-3 left-4 grid h-11 w-11 place-items-center rounded-xl bg-navy/80 ring-1 ring-[var(--color-line)] backdrop-blur">
+              <svg viewBox="0 0 24 24" class="h-5 w-5 text-gold" fill="none" stroke="currentColor" stroke-width="1.6" set:html={s.icon} />
             </span>
-            <h3 class="mt-5 font-display text-xl font-bold text-ink">{s.title}</h3>
+          </div>
+          <div class="p-7">
+            <h3 class="font-display text-xl font-bold text-ink">{s.title}</h3>
             <p class="mt-3 text-[15px] leading-relaxed text-muted">{s.desc}</p>
           </div>
         </article>
